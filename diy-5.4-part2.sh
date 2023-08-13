@@ -30,9 +30,9 @@ sed -i 's/KERNEL_PATCHVER:=6.1/KERNEL_PATCHVER:=5.4/g' target/linux/x86/Makefile
 # make menuconfig时记得勾选LuCI ---> Applications ---> luci-app-argon-config
 
 ########### 更新lean的内置的smartdns版本 ###########
-# sed -i 's/1.2023.41/1.2023.42/g' feeds/packages/net/smartdns/Makefile
-# sed -i 's/60a3719ec739be2cc1e11724ac049b09a75059cb/ed102cda03c56e9c63040d33d4a391b56491493e/g' feeds/packages/net/smartdns/Makefile
-# sed -i 's/^PKG_MIRROR_HASH/#&/' feeds/packages/net/smartdns/Makefile
+sed -i 's/1.2023.42/1.2023.43/g' feeds/packages/net/smartdns/Makefile
+sed -i 's/ed102cda03c56e9c63040d33d4a391b56491493e/1ba6ee7cb98b5b6448bc2a2be318eb3518d4de79/g' feeds/packages/net/smartdns/Makefile
+sed -i 's/^PKG_MIRROR_HASH/#&/' feeds/packages/net/smartdns/Makefile
 
 ########### 安装smartdns（必选）###########
 # git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
